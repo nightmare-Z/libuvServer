@@ -1,0 +1,64 @@
+syntax = "proto2";
+
+enum ServerType {
+	defaultServer = 0;
+	Auth = 1;
+	System = 2;
+	Logic = 3;
+}
+
+enum CommandType {
+	defaultCommand = 0;
+	eGuestLoginReq = 1;
+	eGuestLoginRes = 2;
+	eLoginReq =3;
+	eLoginRes = 4;
+	eGuestUpgradeReq = 5;
+	eGuestUpgradeRes = 6;
+}
+
+enum GameError{
+	ok = 1;
+	eSystemError = -1;
+	eSqlDisconnect = -2;
+	eLoginFreeze = -3;
+	eLoginGuest = -4 ;
+	eReLogin = -5;
+	eUserLoseConn = -6;
+	eGuestUserNameExist = -7;
+}
+
+message GuestInfo{
+	required string nick = 1;
+	required int32 faceImage = 2;
+	required int32 vip = 3;
+	required int32 status = 4;
+	required int32 guestId = 5;
+}
+
+message GuestLoginReq {
+	required string RandKey = 1;
+}
+
+message GuestLoginRes {
+	required int32 guestError = 1;
+	optional GuestInfo info = 2;
+}
+
+message LoginReq {
+	required string username = 1;
+	required string password = 2;
+}
+
+message LoginRes{
+	required int32 status = 1;
+}
+
+message GuestUpgradeReq{
+	required string username = 1;
+	required string password = 2;
+}
+
+message GuestUpgradeRes{
+	required int32 status = 1;
+}

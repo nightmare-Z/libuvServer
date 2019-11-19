@@ -1,0 +1,566 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="utils">
+      <UniqueIdentifier>{272319a6-05ce-4bd6-9cfd-57e7cecea1dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="packages">
+      <UniqueIdentifier>{1a114156-bab7-4796-9c53-1524bcc743a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="getway">
+      <UniqueIdentifier>{09034346-79ed-4fa8-b779-f8fe770ce9c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="netbus">
+      <UniqueIdentifier>{7fbb719a-84d8-4d59-854b-d16192be0905}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="database">
+      <UniqueIdentifier>{c6b357b3-515f-41a4-8b9a-0f6c3bdeb9dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="packages\libuv">
+      <UniqueIdentifier>{1c2f76c6-65fb-4812-a29b-a8307145a484}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="packages\mysql">
+      <UniqueIdentifier>{0adc157e-d5ee-4b98-8b21-0d31ddabbf1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="packages\mysql\mysql">
+      <UniqueIdentifier>{77bebab7-6295-4b46-addb-f8733ed435f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="packages\http_parser">
+      <UniqueIdentifier>{102d102b-4a9a-44a7-8ea6-b06ca08a8515}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="packages\encryption">
+      <UniqueIdentifier>{6e04983d-9b17-4c30-9c52-727f6ca45b2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="packages\lua">
+      <UniqueIdentifier>{b692d88b-1324-4409-8918-1a2faf1e911f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="luainterface">
+      <UniqueIdentifier>{9968928b-d547-46b0-8d46-945540cdf5df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="packages\hiredis">
+      <UniqueIdentifier>{8be47ad1-e605-4888-b30f-1c7946396e52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="packages\toluapp">
+      <UniqueIdentifier>{fab53fad-e87f-49c7-af51-a44ae8f3b8cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="packages\libuv\include">
+      <UniqueIdentifier>{daa8e1e2-6860-44ab-82c9-410ecba036e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mylua">
+      <UniqueIdentifier>{367bd3de-075d-4fd0-8967-833ba11eb36f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mylua\database">
+      <UniqueIdentifier>{682e9f05-689f-41ec-ac1f-c54f64be955d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mylua\service">
+      <UniqueIdentifier>{116bebda-8fed-43da-9777-b52208defe68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mylua\utils">
+      <UniqueIdentifier>{26456089-6019-40c0-ad2a-718f454e2a97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mylua\netbus">
+      <UniqueIdentifier>{9a8c359f-7ad6-413e-afe3-6ec1481408ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mylua\session">
+      <UniqueIdentifier>{3b64ae83-d3dd-4066-b886-bc68b89c43a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mylua\protocol">
+      <UniqueIdentifier>{3777d432-0adc-4c25-822e-a8f990a9e902}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bin">
+      <UniqueIdentifier>{03531a26-23c4-4591-b1e5-0e8c5caeb2bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bin\protocol">
+      <UniqueIdentifier>{507f2aa6-8de9-4cbb-baed-eb4d6e5be437}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\netbus\netbus.h">
+      <Filter>netbus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\netbus\session.h">
+      <Filter>netbus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\netbus\session_uv.h">
+      <Filter>netbus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\utils\Cache.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\netbus\webprotocol.h">
+      <Filter>netbus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\netbus\tcpprotocol.h">
+      <Filter>netbus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\netbus\protocolmanager.h">
+      <Filter>netbus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\netbus\service.h">
+      <Filter>netbus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\netbus\servicemanager.h">
+      <Filter>netbus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\mysql\mysql\jdbc.h">
+      <Filter>packages\mysql\mysql</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\http_parser\http_parser.h">
+      <Filter>packages\http_parser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\encryption\base64_decoder.h">
+      <Filter>packages\encryption</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\encryption\base64_encoder.h">
+      <Filter>packages\encryption</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\encryption\md5.h">
+      <Filter>packages\encryption</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\encryption\sha1.h">
+      <Filter>packages\encryption</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\lua\lapi.h">
+      <Filter>packages\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\lua\lauxlib.h">
+      <Filter>packages\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\lua\lcode.h">
+      <Filter>packages\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\lua\lctype.h">
+      <Filter>packages\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\lua\ldebug.h">
+      <Filter>packages\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\lua\ldo.h">
+      <Filter>packages\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\lua\lfunc.h">
+      <Filter>packages\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\lua\lgc.h">
+      <Filter>packages\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\lua\llex.h">
+      <Filter>packages\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\lua\llimits.h">
+      <Filter>packages\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\lua\lmem.h">
+      <Filter>packages\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\lua\lobject.h">
+      <Filter>packages\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\lua\lopcodes.h">
+      <Filter>packages\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\lua\lparser.h">
+      <Filter>packages\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\lua\lprefix.h">
+      <Filter>packages\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\lua\lstate.h">
+      <Filter>packages\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\lua\lstring.h">
+      <Filter>packages\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\lua\ltable.h">
+      <Filter>packages\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\lua\ltm.h">
+      <Filter>packages\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\lua\lua.h">
+      <Filter>packages\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\lua\lua.hpp">
+      <Filter>packages\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\lua\luaconf.h">
+      <Filter>packages\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\lua\lualib.h">
+      <Filter>packages\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\lua\lundump.h">
+      <Filter>packages\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\lua\lvm.h">
+      <Filter>packages\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\lua\lzio.h">
+      <Filter>packages\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\luainterface\luainterface.h">
+      <Filter>luainterface</Filter>
+    </ClInclude>
+    <ClInclude Include="..\database\mysqlmanager.h">
+      <Filter>database</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\hiredis\ae.h">
+      <Filter>packages\hiredis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\hiredis\async.h">
+      <Filter>packages\hiredis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\hiredis\dict.h">
+      <Filter>packages\hiredis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\hiredis\fmacros.h">
+      <Filter>packages\hiredis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\hiredis\glib.h">
+      <Filter>packages\hiredis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\hiredis\hiredis.h">
+      <Filter>packages\hiredis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\hiredis\ivykis.h">
+      <Filter>packages\hiredis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\hiredis\libev.h">
+      <Filter>packages\hiredis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\hiredis\libevent.h">
+      <Filter>packages\hiredis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\hiredis\libuv.h">
+      <Filter>packages\hiredis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\hiredis\macosx.h">
+      <Filter>packages\hiredis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\hiredis\net.h">
+      <Filter>packages\hiredis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\hiredis\qt.h">
+      <Filter>packages\hiredis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\hiredis\read.h">
+      <Filter>packages\hiredis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\hiredis\sds.h">
+      <Filter>packages\hiredis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\hiredis\sdsalloc.h">
+      <Filter>packages\hiredis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\hiredis\sockcompat.h">
+      <Filter>packages\hiredis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\hiredis\sslio.h">
+      <Filter>packages\hiredis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\hiredis\win32.h">
+      <Filter>packages\hiredis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\toluapp\tolua_event.h">
+      <Filter>packages\toluapp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\toluapp\tolua_fix.h">
+      <Filter>packages\toluapp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\toluapp\tolua++.h">
+      <Filter>packages\toluapp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\libuv\include\tree.h">
+      <Filter>packages\libuv\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\libuv\include\uv.h">
+      <Filter>packages\libuv\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\libuv\include\uv-errno.h">
+      <Filter>packages\libuv\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\libuv\include\uv-threadpool.h">
+      <Filter>packages\libuv\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\libuv\include\uv-version.h">
+      <Filter>packages\libuv\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\package\libuv\include\uv-win.h">
+      <Filter>packages\libuv\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mylua\database\lua_mysql.h">
+      <Filter>mylua\database</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mylua\database\lua_redis.h">
+      <Filter>mylua\database</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mylua\service\lua_service.h">
+      <Filter>mylua\service</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mylua\session\lua_session.h">
+      <Filter>mylua\session</Filter>
+    </ClInclude>
+    <ClInclude Include="..\utils\logger.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\utils\time.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mylua\utils\lua_logger.h">
+      <Filter>mylua\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mylua\utils\lua_schedule.h">
+      <Filter>mylua\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mylua\netbus\lua_netbus.h">
+      <Filter>mylua\netbus</Filter>
+    </ClInclude>
+    <ClInclude Include="..\mylua\protocol\lua_protocol.h">
+      <Filter>mylua\protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\main\protocol\protocol.pb.h">
+      <Filter>bin\protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\main\protocol\protocolmap.h">
+      <Filter>bin\protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\database\redismanager.h">
+      <Filter>database</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\netbus\netbus.cc">
+      <Filter>netbus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\netbus\session_uv.cc">
+      <Filter>netbus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\utils\Cache.cc">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\netbus\webprotocol.cc">
+      <Filter>netbus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\netbus\tcpprotocol.cc">
+      <Filter>netbus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\netbus\protocolmanager.cc">
+      <Filter>netbus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\netbus\servicemanager.cc">
+      <Filter>netbus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\http_parser\http_parser.c">
+      <Filter>packages\http_parser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\encryption\base64_decoder.c">
+      <Filter>packages\encryption</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\encryption\base64_encoder.c">
+      <Filter>packages\encryption</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\encryption\md5.c">
+      <Filter>packages\encryption</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\encryption\sha1.c">
+      <Filter>packages\encryption</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\lua\lapi.c">
+      <Filter>packages\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\lua\lauxlib.c">
+      <Filter>packages\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\lua\lbaselib.c">
+      <Filter>packages\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\lua\lbitlib.c">
+      <Filter>packages\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\lua\lcode.c">
+      <Filter>packages\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\lua\lcorolib.c">
+      <Filter>packages\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\lua\lctype.c">
+      <Filter>packages\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\lua\ldblib.c">
+      <Filter>packages\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\lua\ldebug.c">
+      <Filter>packages\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\lua\ldo.c">
+      <Filter>packages\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\lua\ldump.c">
+      <Filter>packages\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\lua\lfunc.c">
+      <Filter>packages\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\lua\lgc.c">
+      <Filter>packages\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\lua\linit.c">
+      <Filter>packages\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\lua\liolib.c">
+      <Filter>packages\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\lua\llex.c">
+      <Filter>packages\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\lua\lmathlib.c">
+      <Filter>packages\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\lua\lmem.c">
+      <Filter>packages\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\lua\loadlib.c">
+      <Filter>packages\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\lua\lobject.c">
+      <Filter>packages\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\lua\lopcodes.c">
+      <Filter>packages\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\lua\loslib.c">
+      <Filter>packages\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\lua\lparser.c">
+      <Filter>packages\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\lua\lstate.c">
+      <Filter>packages\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\lua\lstring.c">
+      <Filter>packages\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\lua\lstrlib.c">
+      <Filter>packages\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\lua\ltable.c">
+      <Filter>packages\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\lua\ltablib.c">
+      <Filter>packages\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\lua\ltm.c">
+      <Filter>packages\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\lua\lundump.c">
+      <Filter>packages\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\lua\lutf8lib.c">
+      <Filter>packages\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\lua\lvm.c">
+      <Filter>packages\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\lua\lzio.c">
+      <Filter>packages\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\luainterface\luainterface.cc">
+      <Filter>luainterface</Filter>
+    </ClCompile>
+    <ClCompile Include="..\database\mysqlmanager.cc">
+      <Filter>database</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\hiredis\async.c">
+      <Filter>packages\hiredis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\hiredis\dict.c">
+      <Filter>packages\hiredis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\hiredis\hiredis.c">
+      <Filter>packages\hiredis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\hiredis\net.c">
+      <Filter>packages\hiredis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\hiredis\read.c">
+      <Filter>packages\hiredis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\hiredis\sds.c">
+      <Filter>packages\hiredis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\hiredis\sockcompat.c">
+      <Filter>packages\hiredis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\hiredis\sslio.c">
+      <Filter>packages\hiredis</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\toluapp\tolua_event.c">
+      <Filter>packages\toluapp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\toluapp\tolua_fix.cc">
+      <Filter>packages\toluapp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\toluapp\tolua_is.c">
+      <Filter>packages\toluapp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\toluapp\tolua_map.c">
+      <Filter>packages\toluapp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\toluapp\tolua_push.c">
+      <Filter>packages\toluapp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\package\toluapp\tolua_to.c">
+      <Filter>packages\toluapp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mylua\database\lua_mysql.cc">
+      <Filter>mylua\database</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mylua\database\lua_redis.cc">
+      <Filter>mylua\database</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mylua\service\lua_service.cc">
+      <Filter>mylua\service</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mylua\session\lua_session.cc">
+      <Filter>mylua\session</Filter>
+    </ClCompile>
+    <ClCompile Include="..\utils\logger.cc">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\utils\time.cc">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mylua\utils\lua_logger.cc">
+      <Filter>mylua\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mylua\utils\lua_schedule.cc">
+      <Filter>mylua\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mylua\netbus\lua_netbus.cc">
+      <Filter>mylua\netbus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\mylua\protocol\lua_protocol.cc">
+      <Filter>mylua\protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\main\main.cc">
+      <Filter>bin</Filter>
+    </ClCompile>
+    <ClCompile Include="..\main\protocol\protocol.pb.cc">
+      <Filter>bin\protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\main\protocol\protocolmap.cc">
+      <Filter>bin\protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\netbus\service.cc">
+      <Filter>netbus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\database\redismanager.cc">
+      <Filter>database</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\package\lua\Makefile">
+      <Filter>packages\lua</Filter>
+    </None>
+  </ItemGroup>
+</Project>

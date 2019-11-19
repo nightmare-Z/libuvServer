@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{4D5DBFDD-12F5-4416-A404-99534CC027C1}</ProjectGuid>
+    <RootNamespace>Nightmare</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>false</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>../package/protobuf/src;../package/lua/;../package/libuv/include;../;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalOptions>ws2_32.lib Iphlpapi.lib Psapi.lib Userenv.lib libprotobufd.lib libprotobuf-lited.lib libprotocd.lib libuv.lib mysqlcppconn.lib %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>./lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <HeapReserveSize>
+      </HeapReserveSize>
+      <HeapCommitSize>
+      </HeapCommitSize>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\database\mysqlmanager.h" />
+    <ClInclude Include="..\database\redismanager.h" />
+    <ClInclude Include="..\luainterface\luainterface.h" />
+    <ClInclude Include="..\main\protocol\protocol.pb.h" />
+    <ClInclude Include="..\main\protocol\protocolmap.h" />
+    <ClInclude Include="..\mylua\database\lua_mysql.h" />
+    <ClInclude Include="..\mylua\database\lua_redis.h" />
+    <ClInclude Include="..\mylua\netbus\lua_netbus.h" />
+    <ClInclude Include="..\mylua\protocol\lua_protocol.h" />
+    <ClInclude Include="..\mylua\service\lua_service.h" />
+    <ClInclude Include="..\mylua\session\lua_session.h" />
+    <ClInclude Include="..\mylua\utils\lua_logger.h" />
+    <ClInclude Include="..\mylua\utils\lua_schedule.h" />
+    <ClInclude Include="..\netbus\netbus.h" />
+    <ClInclude Include="..\netbus\protocolmanager.h" />
+    <ClInclude Include="..\netbus\service.h" />
+    <ClInclude Include="..\netbus\servicemanager.h" />
+    <ClInclude Include="..\netbus\session.h" />
+    <ClInclude Include="..\netbus\session_uv.h" />
+    <ClInclude Include="..\netbus\tcpprotocol.h" />
+    <ClInclude Include="..\netbus\webprotocol.h" />
+    <ClInclude Include="..\package\encryption\base64_decoder.h" />
+    <ClInclude Include="..\package\encryption\base64_encoder.h" />
+    <ClInclude Include="..\package\encryption\md5.h" />
+    <ClInclude Include="..\package\encryption\sha1.h" />
+    <ClInclude Include="..\package\hiredis\ae.h" />
+    <ClInclude Include="..\package\hiredis\async.h" />
+    <ClInclude Include="..\package\hiredis\dict.h" />
+    <ClInclude Include="..\package\hiredis\fmacros.h" />
+    <ClInclude Include="..\package\hiredis\glib.h" />
+    <ClInclude Include="..\package\hiredis\hiredis.h" />
+    <ClInclude Include="..\package\hiredis\ivykis.h" />
+    <ClInclude Include="..\package\hiredis\libev.h" />
+    <ClInclude Include="..\package\hiredis\libevent.h" />
+    <ClInclude Include="..\package\hiredis\libuv.h" />
+    <ClInclude Include="..\package\hiredis\macosx.h" />
+    <ClInclude Include="..\package\hiredis\net.h" />
+    <ClInclude Include="..\package\hiredis\qt.h" />
+    <ClInclude Include="..\package\hiredis\read.h" />
+    <ClInclude Include="..\package\hiredis\sds.h" />
+    <ClInclude Include="..\package\hiredis\sdsalloc.h" />
+    <ClInclude Include="..\package\hiredis\sockcompat.h" />
+    <ClInclude Include="..\package\hiredis\sslio.h" />
+    <ClInclude Include="..\package\hiredis\win32.h" />
+    <ClInclude Include="..\package\http_parser\http_parser.h" />
+    <ClInclude Include="..\package\libuv\include\tree.h" />
+    <ClInclude Include="..\package\libuv\include\uv-errno.h" />
+    <ClInclude Include="..\package\libuv\include\uv-threadpool.h" />
+    <ClInclude Include="..\package\libuv\include\uv-version.h" />
+    <ClInclude Include="..\package\libuv\include\uv-win.h" />
+    <ClInclude Include="..\package\libuv\include\uv.h" />
+    <ClInclude Include="..\package\lua\lapi.h" />
+    <ClInclude Include="..\package\lua\lauxlib.h" />
+    <ClInclude Include="..\package\lua\lcode.h" />
+    <ClInclude Include="..\package\lua\lctype.h" />
+    <ClInclude Include="..\package\lua\ldebug.h" />
+    <ClInclude Include="..\package\lua\ldo.h" />
+    <ClInclude Include="..\package\lua\lfunc.h" />
+    <ClInclude Include="..\package\lua\lgc.h" />
+    <ClInclude Include="..\package\lua\llex.h" />
+    <ClInclude Include="..\package\lua\llimits.h" />
+    <ClInclude Include="..\package\lua\lmem.h" />
+    <ClInclude Include="..\package\lua\lobject.h" />
+    <ClInclude Include="..\package\lua\lopcodes.h" />
+    <ClInclude Include="..\package\lua\lparser.h" />
+    <ClInclude Include="..\package\lua\lprefix.h" />
+    <ClInclude Include="..\package\lua\lstate.h" />
+    <ClInclude Include="..\package\lua\lstring.h" />
+    <ClInclude Include="..\package\lua\ltable.h" />
+    <ClInclude Include="..\package\lua\ltm.h" />
+    <ClInclude Include="..\package\lua\lua.h" />
+    <ClInclude Include="..\package\lua\lua.hpp" />
+    <ClInclude Include="..\package\lua\luaconf.h" />
+    <ClInclude Include="..\package\lua\lualib.h" />
+    <ClInclude Include="..\package\lua\lundump.h" />
+    <ClInclude Include="..\package\lua\lvm.h" />
+    <ClInclude Include="..\package\lua\lzio.h" />
+    <ClInclude Include="..\package\mysql\mysql\jdbc.h" />
+    <ClInclude Include="..\package\toluapp\tolua++.h" />
+    <ClInclude Include="..\package\toluapp\tolua_event.h" />
+    <ClInclude Include="..\package\toluapp\tolua_fix.h" />
+    <ClInclude Include="..\utils\Cache.h" />
+    <ClInclude Include="..\utils\logger.h" />
+    <ClInclude Include="..\utils\time.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\database\mysqlmanager.cc" />
+    <ClCompile Include="..\database\redismanager.cc" />
+    <ClCompile Include="..\luainterface\luainterface.cc" />
+    <ClCompile Include="..\main\main.cc" />
+    <ClCompile Include="..\main\protocol\protocol.pb.cc" />
+    <ClCompile Include="..\main\protocol\protocolmap.cc" />
+    <ClCompile Include="..\mylua\database\lua_mysql.cc" />
+    <ClCompile Include="..\mylua\database\lua_redis.cc" />
+    <ClCompile Include="..\mylua\netbus\lua_netbus.cc" />
+    <ClCompile Include="..\mylua\protocol\lua_protocol.cc" />
+    <ClCompile Include="..\mylua\service\lua_service.cc" />
+    <ClCompile Include="..\mylua\session\lua_session.cc" />
+    <ClCompile Include="..\mylua\utils\lua_logger.cc" />
+    <ClCompile Include="..\mylua\utils\lua_schedule.cc" />
+    <ClCompile Include="..\netbus\netbus.cc" />
+    <ClCompile Include="..\netbus\protocolmanager.cc" />
+    <ClCompile Include="..\netbus\service.cc" />
+    <ClCompile Include="..\netbus\servicemanager.cc" />
+    <ClCompile Include="..\netbus\session_uv.cc" />
+    <ClCompile Include="..\netbus\tcpprotocol.cc" />
+    <ClCompile Include="..\netbus\webprotocol.cc" />
+    <ClCompile Include="..\package\encryption\base64_decoder.c" />
+    <ClCompile Include="..\package\encryption\base64_encoder.c" />
+    <ClCompile Include="..\package\encryption\md5.c" />
+    <ClCompile Include="..\package\encryption\sha1.c" />
+    <ClCompile Include="..\package\hiredis\async.c" />
+    <ClCompile Include="..\package\hiredis\dict.c" />
+    <ClCompile Include="..\package\hiredis\hiredis.c" />
+    <ClCompile Include="..\package\hiredis\net.c" />
+    <ClCompile Include="..\package\hiredis\read.c" />
+    <ClCompile Include="..\package\hiredis\sds.c" />
+    <ClCompile Include="..\package\hiredis\sockcompat.c" />
+    <ClCompile Include="..\package\hiredis\sslio.c" />
+    <ClCompile Include="..\package\http_parser\http_parser.c" />
+    <ClCompile Include="..\package\lua\lapi.c" />
+    <ClCompile Include="..\package\lua\lauxlib.c" />
+    <ClCompile Include="..\package\lua\lbaselib.c" />
+    <ClCompile Include="..\package\lua\lbitlib.c" />
+    <ClCompile Include="..\package\lua\lcode.c" />
+    <ClCompile Include="..\package\lua\lcorolib.c" />
+    <ClCompile Include="..\package\lua\lctype.c" />
+    <ClCompile Include="..\package\lua\ldblib.c" />
+    <ClCompile Include="..\package\lua\ldebug.c" />
+    <ClCompile Include="..\package\lua\ldo.c" />
+    <ClCompile Include="..\package\lua\ldump.c" />
+    <ClCompile Include="..\package\lua\lfunc.c" />
+    <ClCompile Include="..\package\lua\lgc.c" />
+    <ClCompile Include="..\package\lua\linit.c" />
+    <ClCompile Include="..\package\lua\liolib.c" />
+    <ClCompile Include="..\package\lua\llex.c" />
+    <ClCompile Include="..\package\lua\lmathlib.c" />
+    <ClCompile Include="..\package\lua\lmem.c" />
+    <ClCompile Include="..\package\lua\loadlib.c" />
+    <ClCompile Include="..\package\lua\lobject.c" />
+    <ClCompile Include="..\package\lua\lopcodes.c" />
+    <ClCompile Include="..\package\lua\loslib.c" />
+    <ClCompile Include="..\package\lua\lparser.c" />
+    <ClCompile Include="..\package\lua\lstate.c" />
+    <ClCompile Include="..\package\lua\lstring.c" />
+    <ClCompile Include="..\package\lua\lstrlib.c" />
+    <ClCompile Include="..\package\lua\ltable.c" />
+    <ClCompile Include="..\package\lua\ltablib.c" />
+    <ClCompile Include="..\package\lua\ltm.c" />
+    <ClCompile Include="..\package\lua\lundump.c" />
+    <ClCompile Include="..\package\lua\lutf8lib.c" />
+    <ClCompile Include="..\package\lua\lvm.c" />
+    <ClCompile Include="..\package\lua\lzio.c" />
+    <ClCompile Include="..\package\toluapp\tolua_event.c" />
+    <ClCompile Include="..\package\toluapp\tolua_fix.cc" />
+    <ClCompile Include="..\package\toluapp\tolua_is.c" />
+    <ClCompile Include="..\package\toluapp\tolua_map.c" />
+    <ClCompile Include="..\package\toluapp\tolua_push.c" />
+    <ClCompile Include="..\package\toluapp\tolua_to.c" />
+    <ClCompile Include="..\utils\Cache.cc" />
+    <ClCompile Include="..\utils\logger.cc" />
+    <ClCompile Include="..\utils\time.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\package\lua\Makefile" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
